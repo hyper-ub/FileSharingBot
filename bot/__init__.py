@@ -22,7 +22,7 @@ from random import choices
 from string import ascii_letters, digits
 
 from redis import Redis
-from telethon import Button, TelegramClient, events
+from from pyrogram import Client
 
 from .config import Var
 
@@ -45,7 +45,7 @@ except Exception:
     LOGS.info(str(Exception))
 
 try:
-    bot = TelegramClient(None, Var.APP_ID, Var.API_HASH)
+    bot = Client(None, Var.APP_ID, Var.API_HASH)
 except Exception as e:
     LOGS.info("Environment vars are missing! Kindly recheck.")
     LOGS.info("Bot is quiting...")
