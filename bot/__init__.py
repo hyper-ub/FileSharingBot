@@ -43,9 +43,13 @@ try:
 except Exception:
     sys.exit(Exception)
     LOGS.info(str(Exception))
-
 try:
-    bot = Client(None, Var.APP_ID, Var.API_HASH)
+   bot = Client(
+       "File sharing",
+        bot_token=Var.BOT_TOKEN,
+        api_id=Var.APP_ID
+        api_hash=Var.API_HASH,
+        plugins=plugins)
 except Exception as e:
     LOGS.info("Environment vars are missing! Kindly recheck.")
     LOGS.info("Bot is quiting...")
