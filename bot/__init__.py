@@ -48,8 +48,7 @@ try:
        "File sharing",
         bot_token=Var.BOT_TOKEN,
         api_id=Var.APP_ID
-        api_hash=Var.API_HASH,
-        plugins=plugins)
+        api_hash=Var.API_HASH)
 except Exception as e:
     LOGS.info("Environment vars are missing! Kindly recheck.")
     LOGS.info("Bot is quiting...")
